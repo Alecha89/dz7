@@ -16,9 +16,9 @@ public final class Person {
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return firstName == person.firstName &&
-                lastName == person.lastName &&
-                gender == person.gender;
+        return person.firstName.equals(firstName) &&
+                person.lastName.equals(lastName) &&
+                person.gender.equals(gender);
     }
 
     @Override

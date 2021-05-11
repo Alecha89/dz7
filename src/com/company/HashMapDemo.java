@@ -13,23 +13,24 @@ public class HashMapDemo {
         Person p5 = new Person("Angelina ", "Jolie", Gender.FEMALE);
 
         // Create ArrayList
-        Map<Person, Integer> Persons = new HashMap<>();
-        Persons.put(p1, 1);
-        Persons.put(p2, 2);
-        Persons.put(p3, 3);
-        Persons.put(p4, 4);
-        Persons.put(p5, 5);
-
+        Map<Integer, Person> Persons = new HashMap<Integer, Person>();
+        //Map<Person, Integer> Persons = new HashMap<Integer, Person>();
+        Persons.put(1, p1);
+        Persons.put(2, p2);
+        Persons.put(3, p3);
+        Persons.put(4, p4);
+        Persons.put(5, p5);
         outputCollection(Persons);
     }
 
-    public static void outputCollection(Map<Person, Integer> map) {
+    public static void outputCollection(Map<Integer, Person> map) {
         System.out.println("Вывод: ");
 
-        for (Map.Entry<Person, Integer> keyValuePair : map.entrySet()) {
+        for (Map.Entry<Integer, Person> keyValuePair : map.entrySet()) {
             System.out.println(keyValuePair.getKey() + " - " + keyValuePair.getValue());
         }
-
         System.out.println("Общее количество элементов - "+ map.size());
     }
+
+
 }
